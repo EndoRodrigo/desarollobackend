@@ -7,4 +7,4 @@ Sprint boot
  5. CSS
  6. JS
 
-Por el momento solo pude terminar con la parte del back nno fue posible conectar con el frond.
+Por el momento no fue posible terminar el proyceto no logre conectar el frond con back.

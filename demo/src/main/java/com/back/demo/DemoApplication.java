@@ -1,4 +1,4 @@
-package com.fullcell.demo;
+package com.back.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

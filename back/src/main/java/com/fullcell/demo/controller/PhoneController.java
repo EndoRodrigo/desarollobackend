@@ -1,6 +1,6 @@
 package main.java.com.fullcell.demo.controller;
 
-@restController
+@RestController
 public class PhoneController {
 
     @Autowired

@@ -1,11 +1,7 @@
-let productos = [];
-
-fetch("./js/celulares.json")
-    .then(response => response.json())
-    .then(data => {
-        productos = data;
-        cargarProductos(productos);
-    })
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("Pagina cargo con exito");
+    obtenerProductos();
+});
 
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
@@ -18,6 +14,26 @@ const numerito = document.querySelector("#numerito");
 botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
     aside.classList.remove("aside-visible");
 }))
+
+
+
+async function obtenerProductos() {
+    try {
+        const apiUrl = 'http://localhost:8080/api/listphone';
+        const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+            throw new Error('Error al obtener los datos');
+        }
+        const productos = await response.json();
+        console.log(productos);
+        cargarProductos(productos);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+
 
 
 function cargarProductos(productosElegidos) {

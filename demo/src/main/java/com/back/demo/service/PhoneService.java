@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import com.back.demo.model.Phone;
 import com.back.demo.repository.PhoneRepository;
 
+
 @Service
 public class PhoneService {
 
@@ -20,4 +21,7 @@ public class PhoneService {
         return phoneRepository.save(phone);
     }
 
+    public Iterable<Phone> getListPhoneName(String name){
+        return phoneRepository.findByGama(name);
+    }
 }

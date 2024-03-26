@@ -2,6 +2,9 @@ package com.back.demo.controller;
 
 import com.back.demo.model.Phone;
 import com.back.demo.service.PhoneService;
+
+import jakarta.websocket.server.PathParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 public class PhoneController {
 
 
@@ -19,6 +22,11 @@ public class PhoneController {
     @GetMapping("/listphone")
     public Iterable<Phone> getListPhone(){
         return phoneService.getListPhone();
+    }
+
+    @GetMapping("/phone/name/{gama}")
+    public Iterable<Phone> getListPhoneName(@PathVariable String gama){
+        return phoneService.getListPhoneName(gama);
     }
 
     @PostMapping("/createphone")

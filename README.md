@@ -6,6 +6,8 @@ Sprint boot
  4. HTML
  5. CSS
  6. JS
+ 7. Spring Boot
+    
 
 Por el momento no fue posible terminar el proyceto no logre conectar el frond con back.
 el back -> Carpeta demo

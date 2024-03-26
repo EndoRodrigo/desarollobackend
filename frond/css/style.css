@@ -79,6 +79,7 @@ button:hover {
 }
 
 .login {
+    margin-top: 300px;
     height: 460px;
     background: #eee;
     border-radius: 60% / 10%;

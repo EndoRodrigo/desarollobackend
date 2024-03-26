@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "dea52d87-030f-4899-8912-ab27b5897eb9",
+		"name": "fullcell",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6917111"
+	},
+	"item": [
+		{
+			"name": "phone",
+			"item": [
+				{
+					"name": "Consultar celulares",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzExNDI1NzEzLCJleHAiOjE3MTE0MjkzMTN9.UvrUZXlfilgx5vQ9y4P9foyjVjbLmUkuSXi6w6QfcJ0m56vSye_xted5DWljAmB_bB9XbHZjUxzKkbFznoiNEw",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/listphone",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"listphone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creacion celulares",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzExNDI1NzEzLCJleHAiOjE3MTE0MjkzMTN9.UvrUZXlfilgx5vQ9y4P9foyjVjbLmUkuSXi6w6QfcJ0m56vSye_xted5DWljAmB_bB9XbHZjUxzKkbFznoiNEw",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 8,\r\n        \"name\": \"Iphone 15 Pro Max 256gb 5g\",\r\n        \"image\": \"https://cdn.claro.com.co/imagenes/v9/catalogo/646x1000/70055579_4.jpg\",\r\n        \"price\": 4688960,\r\n        \"peso\": \"162.22 kg\",\r\n        \"marca de procesador\": \"Apple\",\r\n        \"red\": \"2G, 3G, 4G\",\r\n        \"velocidad máxima núcleos\": \"3.1 GHz\",\r\n        \"tipo de cámara frontal\": \"Sencilla\",\r\n        \"Memoria interna\": \"128 GB\",\r\n        \"gama\": \"GAMA ALTA\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/createphone",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"createphone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzExNDI1NzEzLCJleHAiOjE3MTE0MjkzMTN9.UvrUZXlfilgx5vQ9y4P9foyjVjbLmUkuSXi6w6QfcJ0m56vSye_xted5DWljAmB_bB9XbHZjUxzKkbFznoiNEw",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/phone/name/GAMA ALTA",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"phone",
+								"name",
+								"GAMA ALTA"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Consultar usuarios",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Baeldung",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Endo Rodrigo\",\r\n    \"mail\": \"test@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/login/validate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creacion usuarios",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzExNDI1MjYzLCJleHAiOjE3MTE0Mjg4NjN9.EtEDw2zEMkeKBCQjiQI6w4CAZ6s7Nqm-W70PAyBc5fxWUk6WyNlMTAKnocrkQQ8OIwLhqyPnoFZt1P-vYxlt8g",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"name\": \"Endo Rodrigo\",\r\n        \"mail\": \"test@gmail.com\",\r\n        \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
